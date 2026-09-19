@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MIRROR — An Interactive Self-Discovery Experience</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sheen" aria-hidden="true"></div>
+
+<div class="stage">
+  <header class="top ui">
+    <span class="wordmark">MIRROR</span>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark appearance" title="Toggle appearance">◐</button>
+  </header>
+
+  <main>
+
+    <!-- INTRO -->
+    <section class="screen active" id="screen-intro">
+      <h1>Look a little closer.</h1>
+      <p class="lede">MIRROR is a short, scenario-based reflection. Twenty everyday situations, twenty small choices — and a pattern drawn from how you tend to respond.</p>
+
+      <div class="facts ui">
+        <div class="fact"><strong>20</strong>scenario questions</div>
+        <div class="fact"><strong>~5 min</strong>to complete</div>
+        <div class="fact"><strong>5</strong>tendencies measured</div>
+      </div>
+
+      <p class="privacy-note ui">Your responses aren't stored anywhere — not on this device, not on a server. They exist only for this session.</p>
+      <button class="cta" id="beginBtn">Begin</button>
+    </section>
+
+    <!-- QUESTION -->
+    <section class="screen" id="screen-question">
+      <div class="progress-row ui">
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <span class="progress-label" id="progressLabel">1 / 20</span>
+      </div>
+      <p class="q-text" id="qText"></p>
+      <div class="options" id="qOptions"></div>
+      <div class="nav-row ui">
+        <button class="back-link" id="backBtn">Back</button>
+        <span></span>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="screen" id="screen-results">
+      <p class="result-kicker ui" id="resultKicker">Your reflection</p>
+      <h1 class="result-title" id="resultTitle"></h1>
+      <p class="result-desc" id="resultDesc"></p>
+      <p class="result-secondary" id="resultSecondary"></p>
+
+      <p class="pattern-heading ui">Your pattern across MIRROR</p>
+      <div class="traits" id="traits"></div>
+
+      <div class="result-actions ui">
+        <button class="cta" id="retakeBtn">Retake MIRROR</button>
+        <button class="ghost-btn" id="shareBtn">Copy results</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="disclaimer ui">
+    MIRROR is an original self-reflection experience inspired by ideas from personality psychology (the Big&nbsp;Five / OCEAN framework). It is not a clinical assessment, a diagnostic tool, or a scientifically validated test — treat what it shows you as a starting point for reflection, based on your responses in this experience, not a fixed description of who you are.
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
